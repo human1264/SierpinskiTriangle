@@ -1,15 +1,7 @@
 background(255,255,255);
 sierpinski(200,200,153,b);
 }
-public void mouseDragged()//optional
-{
- b++;
-}
-public void mouseMoved()//optional
-{
- b--;
- if(b <=1){b = 1;}
-}
+
 public void sierpinski(int x, int y, int len, int a){
 if(len <= a){
 det(len,x,y);
