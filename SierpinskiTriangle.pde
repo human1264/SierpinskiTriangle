@@ -4,7 +4,7 @@ public void setup()
  
   
 }
-int b = 1;
+int b = 8;
 public void draw()
 {
 background(255,255,255);
