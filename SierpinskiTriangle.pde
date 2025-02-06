@@ -1,25 +1,23 @@
-public void setup()
-{
-  size(800,800);
-  det(10,20,20);
-  sierpinski(200,200,153);
-}
-public void draw()
-{
-
+background(255,255,255);
+sierpinski(200,200,153,b);
 }
 public void mouseDragged()//optional
 {
-
+ b++;
 }
-public void sierpinski(int x, int y, int len){
-if(len <= 8){
+public void mouseMoved()//optional
+{
+ b--;
+ if(b <=1){b = 1;}
+}
+public void sierpinski(int x, int y, int len, int a){
+if(len <= a){
 det(len,x,y);
 }
 else{
-sierpinski(x,y,len/2);
-sierpinski(x+len/2,y,len/2);
-sierpinski(x+len/4,y-len/2,len/2);
+sierpinski(x,y,len/2,a);
+sierpinski(x+len/2,y,len/2,a);
+sierpinski(x+len/4,y-len/2,len/2,a);
 }
 }
 
